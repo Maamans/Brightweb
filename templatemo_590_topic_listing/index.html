@@ -1,0 +1,1823 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Topic Listing Bootstrap 5 Template</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+                        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/templatemo-topic-listing.css" rel="stylesheet">  
+        
+        <style>
+            
+      
+            /* Product Card */
+            .product-card {
+              display: flex;
+              border: 1px solid #4caf50;
+              border-radius: 20px;
+              max-width: 700px;
+              background-color: #fff;
+              box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              position: relative;
+            }
+      
+            /* Image Section */
+            .product-image {
+              flex: 1;
+              background-color: #f9f9f9;
+              padding: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+      
+            .product-image img {
+              max-width: 100%;
+              border-radius: 5px;
+            }
+      
+            /* Details Section */
+            .product-details {
+              flex: 2;
+              padding: 20px;
+            }
+      
+            .product-header {
+              color: #4caf50;
+              font-weight: bold;
+              font-size: 1.2rem;
+              margin-bottom: 15px;
+            }
+      
+            .product-title {
+              font-size: 1.1rem;
+              font-weight: bold;
+              color: #333;
+              margin: 0;
+            }
+      
+            .price {
+              font-size: 1.4rem;
+              color: #4caf50;
+              font-weight: bold;
+              margin: 5px 0;
+            }
+      
+            .availability {
+              display: flex;
+              justify-content: space-between;
+              font-size: 0.9rem;
+              color: #666;
+              margin-top: 5px;
+            }
+      
+            .progress-container {
+              margin-top: 5px;
+            }
+      
+            .progress-bar {
+              background-color: #e0e0e0;
+              border-radius: 5px;
+              overflow: hidden;
+              position: relative;
+              height: 10px;
+            }
+      
+            .progress-bar-inner {
+              background-color: #4caf50;
+              height: 100%;
+            }
+      
+            .progress-text {
+              font-size: 0.8rem;
+              color: #666;
+              text-align: right;
+              padding-top: 2px;
+            }
+      
+            .countdown {
+              display: flex;
+              gap: 5px;
+              font-size: 1.2rem;
+              font-weight: bold;
+              color: #333;
+              margin-top: 15px;
+              justify-content: center;
+            }
+      
+            .countdown span {
+              background-color: #fff;
+              padding: 10px;
+              border-radius: 5px;
+              box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            }
+      
+            .add-to-cart-btn {
+              background-color: #ffc107;
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              padding: 15px 0;
+              font-size: 1rem;
+              font-weight: bold;
+              text-align: center;
+              cursor: pointer;
+              width: 100%;
+              margin-top: 15px;
+            }
+
+            .recommended-products {
+                border-radius: 10px;
+                overflow: hidden;
+                background-color: #fff;
+              }
+            
+              .section-title {
+                background-color: #4CAF50;
+                color: #fff;
+                padding: 10px;
+                margin-bottom: 10px;
+                font-weight: bold;
+              }
+            
+              .product-item {
+                display: flex;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+              }
+            
+              .product-item:last-child {
+                border-bottom: none;
+              }
+            
+              .product-imagee {
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                margin-right: 10px;
+              }
+            
+              .product-info {
+                flex: 1;
+              }
+            
+              .product-name {
+                font-size: 0.9rem;
+                font-weight: bold;
+                margin: 0;
+                color: #333;
+              }
+            
+              .product-price {
+                font-size: 0.9rem;
+                margin: 2px 0;
+              }
+            
+              .product-date, .product-comments {
+                font-size: 0.8rem;
+                color: #888;
+              }
+            
+              .original-price {
+                color: #888;
+                text-decoration: line-through;
+                font-size: 0.8rem;
+                margin-left: 5px;
+              }
+          </style>
+
+    </head>
+
+    
+    
+    <body id="top">
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <span style="">Bright</span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+                    <div style="margin-left: 90px;"  class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Market Listling & Prices</a>
+
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="sustain.html">Loans & Finance</a>
+
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link" href="loans.html">Sustainable Practice</a>                            </li>
+
+                            
+    
+                           
+
+                            
+                        </ul>
+
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <h1 style="font-size: 50px;" class="text-white text-center">Cultivating Transparency. Harvesting Trust.</h1>
+
+                            <h6 class="text-center">Stay informed, sell smart—get the best prices for your produce in real time!</h6>
+
+                            <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text bi-search" id="basic-addon1">
+                                        
+                                    </span>
+
+                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="Search for recent Product Listlings" aria-label="Search">
+
+                                    <button type="submit" class="form-control">Search</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="featured-section">
+                <div class="container">
+                  <div class="row justify-content-center">
+                    
+                    <!-- Left Card (Web Design) -->
+                   
+              
+                    <!-- Right Card (Product Slider) -->
+                  <div class="col-lg-6 col-12">
+  <div class="product-card" id="product-card">
+    <script>
+      // Define products information
+      const products = [
+        {
+          image: "images/carrot.jpg",
+          title: "Carrot (480g)",
+          price: "Le80.00",
+          sold: 39,
+          available: 65,
+          progress: 60,
+          countdownSeconds: 300, // 5 minutes
+        },
+        {
+          image: "images/lettuce.jpeg",
+          title: "Lettuce (5kg)",
+          price: "Le120.00",
+          sold: 20,
+          available: 80,
+          progress: 20,
+          countdownSeconds: 450, // 7.5 minutes
+        },
+        {
+          image: "images/greenbeans.jpeg",
+          title: "Green Beans (1kg)",
+          price: "Le50.00",
+          sold: 45,
+          available: 100,
+          progress: 45,
+          countdownSeconds: 600, // 10 minutes
+        },
+        {
+          image: "images/tomatoes.jpeg",
+          title: "Fresh Tomatoes (3kg)",
+          price: "Le35.00",
+          sold: 30,
+          available: 70,
+          progress: 43,
+          countdownSeconds: 900, // 15 minutes
+        },
+      ];
+
+      let currentIndex = 0;
+      let countdownInterval;
+
+      function displayProduct(index) {
+        const product = products[index];
+        document.getElementById("product-card").innerHTML = `
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.title}" />
+          </div>
+          <div class="product-details">
+            <div class="product-header">Agricultural Produce of the Day</div>
+            <p class="product-title">${product.title}</p>
+            <p class="price">${product.price}</p>
+            <div class="availability">
+              <span>Already Sold: ${product.sold}</span>
+              <span>Available: ${product.available}</span>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-bar-inner" style="width: ${product.progress}%;"></div>
+              </div>
+              <div class="progress-text">${product.progress}%</div>
+            </div>
+            <p style="color: #666; font-size: 0.9rem">Hurry Up! Offer ends soon.</p>
+            <div class="countdown" id="countdown">
+              <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        `;
+        startCountdown(product.countdownSeconds);
+      }
+
+      function startCountdown(seconds) {
+        clearInterval(countdownInterval);
+        const endTime = Date.now() + seconds * 1000;
+
+        countdownInterval = setInterval(() => {
+          const now = Date.now();
+          const distance = endTime - now;
+
+          if (distance <= 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+            return;
+          }
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("days").innerHTML = days.toString().padStart(2, "0");
+          document.getElementById("hours").innerHTML = hours.toString().padStart(2, "0");
+          document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, "0");
+          document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, "0");
+        }, 1000);
+      }
+
+      function startSlider() {
+        displayProduct(currentIndex);
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % products.length;
+          displayProduct(currentIndex);
+        }, 5000); // Change every 5 seconds
+      }
+
+      startSlider();
+    </script>
+  </div>
+</div>
+
+
+
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="recommended-products bg-white shadow-lg p-3">
+                          <h5 class="section-title text-center">You can be interested</h5>
+                          <div class="product-item">
+                            <img src="images/Coconut Chip.jpeg" alt="Product Image" class="product-imagee">
+                            <div class="product-info">
+                              <p class="product-name">Coconut Chip (50g)</p>
+                              <p class="product-price text-success">Le30.00</p>
+                              <p class="product-date">October 16, 2024</p>
+                              <p class="product-comments">0</p>
+                            </div>
+                          </div>
+                          <div class="product-item">
+                            <img src="images/Cacao Beans.jpeg" alt="Product Image" class="product-imagee">
+                            <div class="product-info">
+                              <p class="product-name">Premium Cacao Beans (Sold by Kilo)</p>
+                              <p class="product-price text-success">Le250.00</p>
+                              <p class="product-date">September 13, 2024</p>
+                              <p class="product-comments">0</p>
+                            </div>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+                
+              
+                  </div>
+                </div>
+              </section>
+
+
+            <section class="explore-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12 text-center">
+                            <h3 class="mb-4">Browse list of agric products at affordable price</h3>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">Fresh Vegetables</button>
+                            </li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing-tab-pane" type="button" role="tab" aria-controls="marketing-tab-pane" aria-selected="false">Organic Fruits</button>
+                            </li>
+
+                            <!-- <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false"></button>
+                            </li> -->
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane" type="button" role="tab" aria-controls="music-tab-pane" aria-selected="false">Root and Tuber Crops</button>
+                            </li>
+
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                                <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                  <!-- Product Image -->
+                                                  <div style="position: relative;">
+                                                    <!-- BEST PRICE Ribbon -->
+                                                    <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                      BEST PRICE
+                                                    </div>
+                                                    
+                                                    <!-- Icons (Heart and Check Icon) -->
+                                                    <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                      <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                      <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                    </div>
+                                                    
+                                                    <img src="images/tomatoes.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                  </div>
+                                              
+                                                  <!-- Product Category and Title -->
+                                                  <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                  <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Tomatoes</h5>
+                                              
+                                                  <!-- Divider Line -->
+                                                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                              
+                                                  <!-- Pricing Section -->
+                                                  <div style="text-align:start; margin-bottom: 8px;">
+                                                    <!-- Original Price -->
+                                                    <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                  </div>
+                                                  
+                                                  <!-- Actual Price and Cart Button Row -->
+                                                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                    <!-- Discounted Price -->
+                                                    <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                    
+                                                    <!-- Add to Cart Button -->
+                                                    <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                      <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              
+
+
+                                                
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/lettuce.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Lettuce
+                                                </h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/carrot.jpg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Carrots</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+                                    </div> 
+                                    
+
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                                <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                  <!-- Product Image -->
+                                                  <div style="position: relative;">
+                                                    <!-- BEST PRICE Ribbon -->
+                                                    <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                      BEST PRICE
+                                                    </div>
+                                                    
+                                                    <!-- Icons (Heart and Check Icon) -->
+                                                    <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                      <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                      <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                    </div>
+                                                    
+                                                    <img src="images/cabbages.jpg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                  </div>
+                                              
+                                                  <!-- Product Category and Title -->
+                                                  <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                  <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Cabbage</h5>
+                                              
+                                                  <!-- Divider Line -->
+                                                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                              
+                                                  <!-- Pricing Section -->
+                                                  <div style="text-align:start; margin-bottom: 8px;">
+                                                    <!-- Original Price -->
+                                                    <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                  </div>
+                                                  
+                                                  <!-- Actual Price and Cart Button Row -->
+                                                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                    <!-- Discounted Price -->
+                                                    <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                    
+                                                    <!-- Add to Cart Button -->
+                                                    <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                      <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              
+
+
+                                                
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/cucumber.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Cucumber</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/greenbeans.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Green beans</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                                <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                  <!-- Product Image -->
+                                                  <div style="position: relative;">
+                                                    <!-- BEST PRICE Ribbon -->
+                                                    <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                      BEST PRICE
+                                                    </div>
+                                                    
+                                                    <!-- Icons (Heart and Check Icon) -->
+                                                    <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                      <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                      <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                    </div>
+                                                    
+                                                    <img src="images/onions.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                  </div>
+                                              
+                                                  <!-- Product Category and Title -->
+                                                  <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                  <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Onions</h5>
+                                              
+                                                  <!-- Divider Line -->
+                                                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                              
+                                                  <!-- Pricing Section -->
+                                                  <div style="text-align:start; margin-bottom: 8px;">
+                                                    <!-- Original Price -->
+                                                    <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                  </div>
+                                                  
+                                                  <!-- Actual Price and Cart Button Row -->
+                                                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                    <!-- Discounted Price -->
+                                                    <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                    
+                                                    <!-- Add to Cart Button -->
+                                                    <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                      <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              
+
+
+                                                
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/Garlic.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Garlic</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/peper.jpg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Chili peppers</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+                                    </div>
+
+                                   
+                                   
+
+
+
+
+
+                                
+                                </div>
+
+                                <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                                <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                  <!-- Product Image -->
+                                                  <div style="position: relative;">
+                                                    <!-- BEST PRICE Ribbon -->
+                                                    <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                      BEST PRICE
+                                                    </div>
+                                                    
+                                                    <!-- Icons (Heart and Check Icon) -->
+                                                    <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                      <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                      <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                    </div>
+                                                    
+                                                    <img src="images/Apples.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                  </div>
+                                              
+                                                  <!-- Product Category and Title -->
+                                                  <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                  <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Apples</h5>
+                                              
+                                                  <!-- Divider Line -->
+                                                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                              
+                                                  <!-- Pricing Section -->
+                                                  <div style="text-align:start; margin-bottom: 8px;">
+                                                    <!-- Original Price -->
+                                                    <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                  </div>
+                                                  
+                                                  <!-- Actual Price and Cart Button Row -->
+                                                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                    <!-- Discounted Price -->
+                                                    <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                    
+                                                    <!-- Add to Cart Button -->
+                                                    <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                      <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              
+
+
+                                                
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/oranges.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Oranges</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/Banana.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Bananas
+                                                </h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                                <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                  <!-- Product Image -->
+                                                  <div style="position: relative;">
+                                                    <!-- BEST PRICE Ribbon -->
+                                                    <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                      BEST PRICE
+                                                    </div>
+                                                    
+                                                    <!-- Icons (Heart and Check Icon) -->
+                                                    <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                      <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                      <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                    </div>
+                                                    
+                                                    <img src="images/Grapes.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                  </div>
+                                              
+                                                  <!-- Product Category and Title -->
+                                                  <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                  <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Grapes</h5>
+                                              
+                                                  <!-- Divider Line -->
+                                                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                              
+                                                  <!-- Pricing Section -->
+                                                  <div style="text-align:start; margin-bottom: 8px;">
+                                                    <!-- Original Price -->
+                                                    <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                  </div>
+                                                  
+                                                  <!-- Actual Price and Cart Button Row -->
+                                                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                    <!-- Discounted Price -->
+                                                    <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                    
+                                                    <!-- Add to Cart Button -->
+                                                    <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                      <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              
+
+
+                                                
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/Pineapples.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Pineapples</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/Watermelon.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Watermelons</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                                <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                  <!-- Product Image -->
+                                                  <div style="position: relative;">
+                                                    <!-- BEST PRICE Ribbon -->
+                                                    <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                      BEST PRICE
+                                                    </div>
+                                                    
+                                                    <!-- Icons (Heart and Check Icon) -->
+                                                    <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                      <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                      <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                    </div>
+                                                    
+                                                    <img src="images/Pears.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                  </div>
+                                              
+                                                  <!-- Product Category and Title -->
+                                                  <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                  <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Pears</h5>
+                                              
+                                                  <!-- Divider Line -->
+                                                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                              
+                                                  <!-- Pricing Section -->
+                                                  <div style="text-align:start; margin-bottom: 8px;">
+                                                    <!-- Original Price -->
+                                                    <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                  </div>
+                                                  
+                                                  <!-- Actual Price and Cart Button Row -->
+                                                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                    <!-- Discounted Price -->
+                                                    <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                    
+                                                    <!-- Add to Cart Button -->
+                                                    <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                      <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              
+
+
+                                                
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/Lemon.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Lemons</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+
+                                       
+                                    </div>
+     
+                                  </div>  
+
+                                
+                                
+
+                                <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                                <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                  <!-- Product Image -->
+                                                  <div style="position: relative;">
+                                                    <!-- BEST PRICE Ribbon -->
+                                                    <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                      BEST PRICE
+                                                    </div>
+                                                    
+                                                    <!-- Icons (Heart and Check Icon) -->
+                                                    <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                      <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                      <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                    </div>
+                                                    
+                                                    <img src="images/potatoes.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                  </div>
+                                              
+                                                  <!-- Product Category and Title -->
+                                                  <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                  <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Potatoes</h5>
+                                              
+                                                  <!-- Divider Line -->
+                                                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                              
+                                                  <!-- Pricing Section -->
+                                                  <div style="text-align:start; margin-bottom: 8px;">
+                                                    <!-- Original Price -->
+                                                    <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                  </div>
+                                                  
+                                                  <!-- Actual Price and Cart Button Row -->
+                                                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                    <!-- Discounted Price -->
+                                                    <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                    
+                                                    <!-- Add to Cart Button -->
+                                                    <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                      <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              
+
+
+                                                
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/sweet.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Sweet potatoes</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/yams.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Yams</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                                <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                  <!-- Product Image -->
+                                                  <div style="position: relative;">
+                                                    <!-- BEST PRICE Ribbon -->
+                                                    <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                      BEST PRICE
+                                                    </div>
+                                                    
+                                                    <!-- Icons (Heart and Check Icon) -->
+                                                    <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                      <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                      <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                    </div>
+                                                    
+                                                    <img src="images/carrot.jpg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                  </div>
+                                              
+                                                  <!-- Product Category and Title -->
+                                                  <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                  <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Carrots</h5>
+                                              
+                                                  <!-- Divider Line -->
+                                                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                              
+                                                  <!-- Pricing Section -->
+                                                  <div style="text-align:start; margin-bottom: 8px;">
+                                                    <!-- Original Price -->
+                                                    <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                  </div>
+                                                  
+                                                  <!-- Actual Price and Cart Button Row -->
+                                                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                    <!-- Discounted Price -->
+                                                    <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                    
+                                                    <!-- Add to Cart Button -->
+                                                    <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                      <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              
+
+
+                                                
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/onions.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Onions</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                <!-- Product Image -->
+                                                <div style="position: relative;">
+                                                  <!-- BEST PRICE Ribbon -->
+                                                  <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                    BEST PRICE
+                                                  </div>
+                                                  
+                                                  <!-- Icons (Heart and Check Icon) -->
+                                                  <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                    <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                    <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                  </div>
+                                                  
+                                                  <img src="images/ginger.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                </div>
+                                            
+                                                <!-- Product Category and Title -->
+                                                <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Ginger</h5>
+                                            
+                                                <!-- Divider Line -->
+                                                <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                            
+                                                <!-- Pricing Section -->
+                                                <div style="text-align:start; margin-bottom: 8px;">
+                                                  <!-- Original Price -->
+                                                  <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                </div>
+                                                
+                                                <!-- Actual Price and Cart Button Row -->
+                                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                  <!-- Discounted Price -->
+                                                  <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                  
+                                                  <!-- Add to Cart Button -->
+                                                  <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                    <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                  </button>
+                                                </div>
+                                              </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                   
+
+
+
+
+
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                                <div class="custom-block" style="background-color: white; border: 1px solid #e0e0e0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; position: relative; padding: 16px; text-align: center; max-width: 100%;">
+                                                  
+                                                  <!-- Product Image -->
+                                                  <div style="position: relative;">
+                                                    <!-- BEST PRICE Ribbon -->
+                                                    <div style="position: absolute; top: 10px; right: -20px; background-color: red; color: white; padding: 4px 12px; font-size: 12px; font-weight: bold; transform: rotate(45deg); width: 120px; text-align: center; box-shadow: 0px 4px 8px rgba(0,0,0,0.1);">
+                                                      BEST PRICE
+                                                    </div>
+                                                    
+                                                    <!-- Icons (Heart and Check Icon) -->
+                                                    <div style="position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 10px;">
+                                                      <i class="fa fa-heart" style="font-size: 20px; color: #ff6666; cursor: pointer;"></i>
+                                                      <i class="fa fa-check-square" style="font-size: 20px; color: #66cc66; cursor: pointer;"></i>
+                                                    </div>
+                                                    
+                                                    <img src="images/Garlic.jpeg" alt="Product Image" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-top: 20px;">
+                                                  </div>
+                                              
+                                                  <!-- Product Category and Title -->
+                                                  <p style="font-size: 12px; color: gray; text-transform: uppercase; margin: 8px 0 4px;">Uncategorized</p>
+                                                  <h5 style="font-size: 16px; font-weight: 500; color: #333; margin: 0;">Garlic</h5>
+                                              
+                                                  <!-- Divider Line -->
+                                                  <hr style="border: none; border-top: 1px solid #e0e0e0; margin-top: 16px; width: 100%;">
+                                              
+                                                  <!-- Pricing Section -->
+                                                  <div style="text-align:start; margin-bottom: 8px;">
+                                                    <!-- Original Price -->
+                                                    <span style="text-decoration: line-through; color: #888; font-size: 14px;">Le140.00</span>
+                                                  </div>
+                                                  
+                                                  <!-- Actual Price and Cart Button Row -->
+                                                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                                                    <!-- Discounted Price -->
+                                                    <div style="font-weight: bold; color: red; font-size: 16px;">Le130.00</div>
+                                                    
+                                                    <!-- Add to Cart Button -->
+                                                    <button style="background-color: yellow; color: black; border: none; padding: 12px 16px; border-radius: 50%; font-size: 26px; cursor: pointer;">
+                                                      <i class="fa fa-shopping-cart" style="color: black;"></i>
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              
+
+
+                                                
+                                        </div>
+
+                                       
+
+                                        
+                                    </div>
+                        
+                                </div>
+
+                                <div class="tab-pane fade" id="education-tab-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-3">
+                                            <div class="custom-block bg-white shadow-lg">
+                                                <a href="topics-detail.html">
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <h5 class="mb-2">Graduation</h5>
+
+                                                            <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                        </div>
+
+                                                        <span class="badge bg-education rounded-pill ms-auto">80</span>
+                                                    </div>
+
+                                                    <img src="images/topics/undraw_Graduation_re_gthn.png" class="custom-block-image img-fluid" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+         
+
+
+            <section class="faq-section section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <h4 class="mb-4">Stay updated on top market prices, grants, seeds, and resources! Subscribe now via SMS with QCell.</h4>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-lg-5 col-12">
+                            <img src="images/faq_graphic.jpg" class="img-fluid" alt="FAQs">
+                        </div>
+
+                        <div class="col-lg-6 col-12 m-auto">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Subscribe now to stay updated on the best-selling prices with Qcell!
+                                        </button>
+                                    </h2>
+
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Are you a farmer curious about the best prices to sell your products? Subscribe with Qcell to stay informed on the latest market updates!                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Subscribe now for the latest updates on grants, seeds, and resources with Qcell!
+                                    </button>
+                                    </h2>
+
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Looking to expand your farm but lacking access to grants and resources? Subscribe now with Qcell to stay updated on the latest information about grants, seeds, and essential resources!                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+           
+        </main>
+
+<footer class="site-footer section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-12 mb-4 pb-2">
+                        <a class="navbar-brand mb-2" href="index.html">
+                            <img style="width: 100px;" src="images/bright.png" alt="">
+                            <span>Bright</span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h6 class="site-footer-title mb-3">Resources</h6>
+
+                        <ul class="site-footer-links">
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Market Listling & Prices</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Loans & Finance</a>
+                            </li>
+
+                            <li class="site-footer-link-item">
+                                <a href="#" class="site-footer-link">Sustainable Practice</a>
+                            </li>
+
+                            
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                        <h6 class="site-footer-title mb-3">Information</h6>
+
+                        <p class="text-white d-flex mb-1">
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                                +232958273
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <a href="brightagriculturesl@gmail.com" class="site-footer-link">
+                               brightagriculturesl@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                       
+
+                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2024 Bright SL L.T.D. All rights reserved.
+                        
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>

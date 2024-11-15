@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Topic Detail Page</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+
+    <link href="css/templatemo-topic-listing.css" rel="stylesheet" />
+ 
+
+<style>
+  .grants-section {
+    padding-top: 30px; /* Adjusts section padding */
+    padding-bottom: 30px;
+  }
+  .grant-card {
+    height: 350px; /* Reduces card height */
+  }
+  .grant-image {
+    max-height: 120px; /* Adjusts image height */
+  }
+  .grant-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Overall Header Styling */
+.site-header {
+  background-color: #333;
+  color: #fff;
+  padding: 60px 0;
+}
+
+.site-header .breadcrumb {
+  background: transparent;
+  padding-left: 0;
+}
+
+.site-header h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.custom-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Column Alignment for Left Section */
+.site-header .col-lg-5:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.site-header .col-lg-5:first-child .breadcrumb,
+.site-header .col-lg-5:first-child h2,
+.site-header .col-lg-5:first-child .d-flex {
+  margin-bottom: 20px;
+}
+
+/* Equal Height for Right Section */
+.opportunities-detail-block {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px; /* Push the image slightly to the right */
+}
+
+.opportunities-detail-block img {
+  width: 110%; /* Increase width */
+  height: 150%; /* Increase height */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: -10px; /* Align more to the right */
+}
+
+/* Responsive Adjustment */
+@media (min-width: 992px) {
+  .site-header .container {
+    display: flex;
+    align-items: stretch;
+  }
+  .site-header .col-lg-5 {
+    display: flex;
+  }
+}
+
+</style>
+  </head>
+
+  <body id="top">
+    <main>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span style="">Bright</span>
+            </a>
+
+            <div class="d-lg-none ms-auto me-4">
+                <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div style="margin-left: 90px;"  class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Market Listling & Prices</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sustain.html">Loans & Finance</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="loans.html">Sustainable Practice</a>                            </li>
+
+                    
+                </ul>
+
+                <div class="d-none d-lg-block">
+                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                </div>
+            </div>
+        </div>
+    </nav>     <header
+    class="site-header d-flex flex-column justify-content-center align-items-center"
+  >
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-5 col-12 mb-5">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html">Homepage</a>
+              </li>
+  
+              <li class="breadcrumb-item active" aria-current="page">
+                Agricultural Opportunities
+              </li>
+            </ol>
+          </nav>
+  
+          <h2 class="text-white">
+            Access Real Opportunities: Grants & Seed Resources <br>
+             for Farmers to Increase Production Yields.
+          </h2>
+  
+          <div class="d-flex align-items-center mt-5">
+            <a
+              href="#opportunities-detail"
+              class="btn custom-btn custom-border-btn smoothscroll me-4"
+              >Learn More</a
+            >
+  
+            <a href="#top" class="custom-icon bi-bookmark smoothscroll"></a>
+          </div>
+        </div>
+  
+        <div style="margin-left: 180px;" class="col-lg-5 col-12">
+          <div class="opportunities-detail-block bg-white shadow-lg">
+            <img
+              src="images/grants sol.jpeg"
+              class="opportunities-detail-block-image img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="grants-section">
+    <div class="container">
+      <div class="row justify-content-center">
+  
+        <!-- Grant Opportunity 1 -->
+        <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center text-center mb-4">
+          <div class="grant-card shadow-lg p-4" style="width: 100%; height:395px">
+            <img src="images/seed.jpeg" class="grant-image img-fluid mb-3" alt="Seed Distribution Program">
+            <h5 class="mt-3"><strong>Government Seed Distribution Program</strong></h5>
+            <p>Receive high-quality seeds through the Ministry of Agriculture. Apply to boost your crop yields.</p>
+            <a href="https://ministryofagriculture.gov/apply" class="btn custom-btn mt-3">Apply Now</a>
+          </div>
+        </div>
+  
+        <!-- Grant Opportunity 2 -->
+        <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center text-center mb-4">
+          <div class="grant-card shadow-lg p-4" style="width: 100%; height:395px">
+            <img src="images/grant.png" class="grant-image img-fluid mb-3" alt="Agricultural Expansion Grants">
+            <h5 class="mt-3"><strong>NGO Agricultural Expansion Grants</strong></h5>
+            <p>Funded by the Global Farming Initiative, offers $5,000 for sustainable farming technology.</p>
+            <a href="https://globalfarminginitiative.org/apply" class="btn custom-btn mt-3">Apply Now</a>
+          </div>
+        </div>
+  
+        <!-- Grant Opportunity 3 -->
+        <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center text-center mb-4">
+          <div class="grant-card shadow-lg p-4" style="width: 100%; height:395px">
+            <img src="images/faotraining.jpeg" class="grant-image img-fluid mb-3" alt="FAO Training Support">
+            <h5 class="mt-3"><strong>FAO Resources & Training Support</strong></h5>
+            <p>FAO offers seed funding and training resources for small farmers. Visit FAO’s site to apply.</p>
+            <a href="https://fao.org/resources/apply" class="btn custom-btn mt-3">Apply Now</a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <section class="grants-section">
+    <div class="container">
+      <div class="row justify-content-center">
+  
+        <!-- Grant Opportunity 4 -->
+        <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center text-center mb-4">
+          <div class="grant-card shadow-lg p-4" style="width: 100%; height:395px">
+            <img src="images/grantfao.jpeg" class="grant-image img-fluid mb-3" alt="Farmer Loan Program">
+            <h5 class="mt-3"><strong>Farmer Loan Program</strong></h5>
+            <p>Access low-interest loans tailored for farmers looking to expand production capabilities.</p>
+            <a href="https://farmerloan.gov/apply" class="btn custom-btn mt-3">Apply Now</a>
+          </div>
+        </div>
+  
+        <!-- Grant Opportunity 5 -->
+        <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center text-center mb-4">
+          <div class="grant-card shadow-lg p-4" style="width: 100%; height:395px">
+            <img src="images/grants sol.jpeg" class="grant-image img-fluid mb-3" alt="Organic Farming Grant">
+            <h5 class="mt-3"><strong>Organic Farming Grant</strong></h5>
+            <p>Get financial support for transitioning to organic farming, provided by the Green Earth Fund.</p>
+            <a href="https://greenearthfund.org/apply" class="btn custom-btn mt-3">Apply Now</a>
+          </div>
+        </div>
+  
+        <!-- Grant Opportunity 6 -->
+        <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-items-center text-center mb-4">
+          <div class="grant-card shadow-lg p-4" style="width: 100%; height:395px">
+            <img src="images/wateraccess.jpeg" class="grant-image img-fluid mb-3" alt="Water Access Grant">
+            <h5 class="mt-3"><strong>Water Access Grant</strong></h5>
+            <p>Funding for sustainable water systems, supported by WaterAid. Apply to improve water access.</p>
+            <a href="https://wateraid.org/apply" class="btn custom-btn mt-3">Apply Now</a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding section-bg">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-12">
+          <img
+            src="images/Screenshot 2024-09-13 202630.png"
+            class="newsletter-image img-fluid"
+            alt=""
+          />
+        </div>
+  
+        <div
+          class="col-lg-5 col-12 subscribe-form-wrap d-flex justify-content-center align-items-center"
+        >
+          <form
+            class="custom-form subscribe-form"
+            action="#"
+            method="post"
+            role="form"
+          >
+            <h4 class="mb-4 pb-2">Stay Updated on New Opportunities: Subscribe via Qcell network, chat, or email.</h4>
+  
+            <input
+              type="email"
+              name="subscribe-email"
+              id="subscribe-email"
+              pattern="[^ @]*@[^ @]*"
+              class="form-control"
+              placeholder="Email Address"
+              required=""
+            />
+  
+            <div class="col-lg-12 col-12">
+              <button type="submit" class="form-control">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+    <footer class="site-footer section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-12 mb-4 pb-2">
+            <a class="navbar-brand mb-2" href="index.html">
+              <img style="width: 100px" src="images/bright.png" alt="" />
+              <span>Bright</span>
+            </a>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <h6 class="site-footer-title mb-3">Resources</h6>
+
+            <ul class="site-footer-links">
+              <li class="site-footer-link-item">
+                <a href="#" class="site-footer-link"
+                  >Market Listling & Prices</a
+                >
+              </li>
+
+              <li class="site-footer-link-item">
+                <a href="#" class="site-footer-link">Loans & Finance</a>
+              </li>
+
+              <li class="site-footer-link-item">
+                <a href="#" class="site-footer-link">Sustainable Practice</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+            <h6 class="site-footer-title mb-3">Information</h6>
+
+            <p class="text-white d-flex mb-1">
+              <a href="tel: 305-240-9671" class="site-footer-link">
+                +232958273
+              </a>
+            </p>
+
+            <p class="text-white d-flex">
+              <a href="brightagriculturesl@gmail.com" class="site-footer-link">
+                brightagriculturesl@gmail.com
+              </a>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+            <p class="copyright-text mt-lg-5 mt-4">
+              Copyright © 2024 Bright SL L.T.D. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Slider</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      /* Product Card */
+      .product-card {
+        display: flex;
+        border: 1px solid #4caf50;
+        border-radius: 10px;
+        max-width: 700px;
+        background-color: #fff;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Image Section */
+      .product-image {
+        flex: 1;
+        background-color: #f9f9f9;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .product-image img {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+
+      /* Details Section */
+      .product-details {
+        flex: 2;
+        padding: 20px;
+      }
+
+      .product-header {
+        color: #4caf50;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+
+      .product-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+      }
+
+      .price {
+        font-size: 1.4rem;
+        color: #4caf50;
+        font-weight: bold;
+        margin: 5px 0;
+      }
+
+      .availability {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 5px;
+      }
+
+      .progress-container {
+        margin-top: 5px;
+      }
+
+      .progress-bar {
+        background-color: #e0e0e0;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        height: 10px;
+      }
+
+      .progress-bar-inner {
+        background-color: #4caf50;
+        height: 100%;
+      }
+
+      .progress-text {
+        font-size: 0.8rem;
+        color: #666;
+        text-align: right;
+        padding-top: 2px;
+      }
+
+      .countdown {
+        display: flex;
+        gap: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        margin-top: 15px;
+        justify-content: center;
+      }
+
+      .countdown span {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .add-to-cart-btn {
+        background-color: #ffc107;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 0;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-card" id="product-card">
+      <!-- Dynamic Content Will be Inserted Here -->
+    </div>
+
+    <script>
+      // Define products information
+      const products = [
+        {
+          image: "https://via.placeholder.com/200",
+          title: "Peanut Cooking Paste (480g)",
+          price: "Le80.00",
+          sold: 39,
+          available: 65,
+          progress: 60,
+        },
+        {
+          image: "https://via.placeholder.com/200",
+          title: "Organic Mangoes (5kg)",
+          price: "Le120.00",
+          sold: 20,
+          available: 80,
+          progress: 20,
+        },
+        {
+          image: "https://via.placeholder.com/200",
+          title: "Cassava Flour (1kg)",
+          price: "Le50.00",
+          sold: 45,
+          available: 100,
+          progress: 45,
+        },
+        {
+          image: "https://via.placeholder.com/200",
+          title: "Fresh Tomatoes (3kg)",
+          price: "Le35.00",
+          sold: 30,
+          available: 70,
+          progress: 43,
+        },
+      ];
+
+      let currentIndex = 0;
+
+      function displayProduct(index) {
+        const product = products[index];
+        document.getElementById("product-card").innerHTML = `
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.title}" />
+          </div>
+          <div class="product-details">
+            <div class="product-header">Agricultural Produce of the Day</div>
+            <p class="product-title">${product.title}</p>
+            <p class="price">${product.price}</p>
+            <div class="availability">
+              <span>Already Sold: ${product.sold}</span>
+              <span>Available: ${product.available}</span>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar">
+                <div class="progress-bar-inner" style="width: ${product.progress}%;"></div>
+              </div>
+              <div class="progress-text">${product.progress}%</div>
+            </div>
+            <p style="color: #666; font-size: 0.9rem">Hurry Up! Offer ends soon.</p>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        `;
+      }
+
+      function startSlider() {
+        displayProduct(currentIndex);
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % products.length;
+          displayProduct(currentIndex);
+        }, 5000); // Change every 5 seconds
+      }
+
+      startSlider();
+    </script>
+  </body>
+</html>
